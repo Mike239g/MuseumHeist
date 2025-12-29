@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21610f57c25c0a14eae6251f6b3c50da, type: 3}
   m_Name: Chase
   m_EditorClassIdentifier: Assembly-CSharp::ChaseState
-  transitions: []
+  transitions:
+  - Condition: {fileID: 11400000, guid: 00817fe623b517642a18632f1b69d474, type: 2}
+    state: {fileID: 11400000, guid: 00aca21db30a2a04eab44227524a8383, type: 2}
+  repathInterval: 0.2

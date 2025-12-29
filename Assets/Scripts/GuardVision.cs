@@ -24,6 +24,17 @@ public class GuardVision : MonoBehaviour
 
         if (detected)
             bb.lastSeenPosition = bb.player.transform.position;
+        
+        if (bb.playerInSight)
+        {
+            bb.timeSinceLastSeen = 0f;
+            bb.lastSeenPosition = bb.player.transform.position;
+        }
+        else
+        {
+            bb.timeSinceLastSeen += Time.deltaTime;
+        }
+
     }
 
     bool PlayerInFOV()
@@ -48,5 +59,26 @@ public class GuardVision : MonoBehaviour
         }
 
         return false;
+    }
+    
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, viewDistance);
+
+        Vector3 left =
+            Quaternion.Euler(0, -viewAngle / 2f, 0) * transform.forward;
+        Vector3 right =
+            Quaternion.Euler(0, viewAngle / 2f, 0) * transform.forward;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, transform.position + left * viewDistance);
+        Gizmos.DrawLine(transform.position, transform.position + right * viewDistance);
+
+        if (bb != null && bb.player != null)
+        {
+            Gizmos.color = bb.playerInSight ? Color.red : Color.gray;
+            Gizmos.DrawLine(transform.position, bb.player.transform.position);
+        }
     }
 }

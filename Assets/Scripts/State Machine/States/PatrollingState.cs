@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(menuName = "FSM/States/Guard Patrol")]
+[CreateAssetMenu(menuName = "FSM/States/Guard Patrol", fileName = "Patrolling State")]
 public class PatrollingState : State
 {
     public float reachDistance = 0.5f;

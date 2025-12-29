@@ -13,4 +13,8 @@ public class GuardBlackboard : MonoBehaviour
     [Header("Perception")]
     public bool playerInSight;
     public Vector3 lastSeenPosition;
+    
+    [Header("Chase Memory")]
+    public float timeSinceLastSeen;
+
 }
