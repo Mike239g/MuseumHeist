@@ -283,7 +283,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2534013, y: -0.00000006024419, z: 0.00000001578103, w: 0.9673613}
-  m_LocalPosition: {x: -7.6, y: 3.31, z: -12.97}
+  m_LocalPosition: {x: 2.09, y: 3.31, z: -7.3599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1052,7 +1052,7 @@ Transform:
   m_GameObject: {fileID: 621430458}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2534013, y: -0.000000060963366, z: 0.000000018526478, w: 0.9673613}
-  m_LocalPosition: {x: -7.6, y: 3.31, z: -12.97}
+  m_LocalPosition: {x: 2.09, y: 3.31, z: -7.3599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1251,7 +1251,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -1503,6 +1503,7 @@ MonoBehaviour:
   playerInSight: 0
   lastSeenPosition: {x: 0, y: 0, z: 0}
   timeSinceLastSeen: 0
+  waitTimeAtLastPosition: 5
 --- !u!195 &1949613216
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1558,7 +1559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVision
   viewDistance: 10
-  viewAngle: 90
+  viewAngle: 60
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1804,7 +1805,7 @@ Transform:
   m_GameObject: {fileID: 2081750369}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.6, y: 1.06, z: -8.97}
+  m_LocalPosition: {x: 2.09, y: 1.06, z: -3.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1825,7 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   playerSpeed: 5
-  camera: {fileID: 330585546}
+  camera: {fileID: 621430464}
 --- !u!143 &2081750375
 CharacterController:
   m_ObjectHideFlags: 0

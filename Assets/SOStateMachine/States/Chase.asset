@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChaseState
   transitions:
   - Condition: {fileID: 11400000, guid: 00817fe623b517642a18632f1b69d474, type: 2}
-    state: {fileID: 11400000, guid: 00aca21db30a2a04eab44227524a8383, type: 2}
+    state: {fileID: 11400000, guid: 2e489696494e4b14d9c44e8111bb1c0d, type: 2}
   repathInterval: 0.2

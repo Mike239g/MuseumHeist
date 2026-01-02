@@ -16,5 +16,6 @@ public class GuardBlackboard : MonoBehaviour
     
     [Header("Chase Memory")]
     public float timeSinceLastSeen;
+	public float waitTimeAtLastPosition;
 
 }

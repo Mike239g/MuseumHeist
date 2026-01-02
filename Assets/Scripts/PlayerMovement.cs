@@ -17,11 +17,13 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         inputActions = new InputSystem_Actions();
         inputActions.Player.Move.Enable();
+        movementInput = Vector2.zero;
     }
 
     private void Update()
     {
         InputHandle();
+        
     }
 
     private void FixedUpdate()
