@@ -7,6 +7,8 @@ public class GuardBlackboard : MonoBehaviour
     
     [Header("Patrol")]
     public Transform[] patrolPoints;
+    public float patrolSpeed = 0f;
+    public float alertPatrolSpeed = 10;
     public NavMeshAgent agent;
     public int currentPatrolIndex;
     
@@ -17,5 +19,10 @@ public class GuardBlackboard : MonoBehaviour
     [Header("Chase Memory")]
     public float timeSinceLastSeen;
 	public float waitTimeAtLastPosition;
+
+	[Header("Room")] 
+	public bool isAlert = false;
+	public GuardBlackboard[] partners;
+	
 
 }

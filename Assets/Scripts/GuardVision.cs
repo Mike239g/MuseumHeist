@@ -18,17 +18,29 @@ public class GuardVision : MonoBehaviour
         if (bb.player == null)
             return;
 
-        bool detected = PlayerInFOV();
+        //bool detected = PlayerInFOV();
 
-        bb.playerInSight = detected;
+        bb.playerInSight = PlayerInFOV();
 
-        if (detected)
-            bb.lastSeenPosition = bb.player.transform.position;
+        // if (detected)
+        // {
+        //     bb.lastSeenPosition = bb.player.transform.position;
+        // }
         
         if (bb.playerInSight)
         {
+            bb.isAlert = true;
             bb.timeSinceLastSeen = 0f;
             bb.lastSeenPosition = bb.player.transform.position;
+
+            foreach (GuardBlackboard partner in bb.partners)
+            {
+                if (partner == null)
+                    return;
+                
+                if (!partner.isAlert)
+                    partner.isAlert = true;
+            }
         }
         else
         {

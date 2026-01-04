@@ -17,7 +17,7 @@ public class ChaseState : State
 
         if (bb.player == null)
             return;
-
+        
         repathTimer -= Time.deltaTime;
 
         if (repathTimer <= 0f)

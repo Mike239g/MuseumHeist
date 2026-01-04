@@ -15,7 +15,10 @@ public class PatrollingState : State
 
         if (bb.patrolPoints.Length == 0)
             return;
-
+        
+        float speed = bb.isAlert ? bb.alertPatrolSpeed : bb.patrolSpeed;
+        bb.agent.speed = speed;
+        
         if (!bb.agent.pathPending && bb.agent.remainingDistance <= reachDistance)
         {
             bb.currentPatrolIndex = (bb.currentPatrolIndex + 1) % bb.patrolPoints.Length;
