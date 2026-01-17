@@ -13,6 +13,7 @@ public class StateMachine : MonoBehaviour
     {
         blackboard = GetComponent<GuardBlackboard>();
         blackboard.agent = GetComponent<NavMeshAgent>();
+        blackboard.guardRenderer = GetComponent<Renderer>();
     }
 
     private void Start()

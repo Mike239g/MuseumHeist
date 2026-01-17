@@ -4,11 +4,12 @@ using UnityEngine.AI;
 public class GuardBlackboard : MonoBehaviour
 {
     public GameObject player;
+    public Renderer guardRenderer;
     
     [Header("Patrol")]
     public Transform[] patrolPoints;
-    public float patrolSpeed = 0f;
-    public float alertPatrolSpeed = 10;
+    public float patrolSpeed = 3.5f;
+    public float alertPatrolSpeed = 7.5f;
     public NavMeshAgent agent;
     public int currentPatrolIndex;
     

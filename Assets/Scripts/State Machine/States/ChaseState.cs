@@ -9,6 +9,7 @@ public class ChaseState : State
     public override void EnterState(StateMachine sm)
     {
         repathTimer = 0f;
+        sm.blackboard.guardRenderer.material.color = Color.red;
     }
 
     public override void UpdateState(StateMachine sm)
@@ -31,5 +32,6 @@ public class ChaseState : State
     public override void ExitState(StateMachine sm)
     {
         repathTimer = 0f;
+        sm.blackboard.guardRenderer.material.color = Color.gray;
     }
 }

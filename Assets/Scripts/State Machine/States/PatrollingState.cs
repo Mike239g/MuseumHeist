@@ -16,6 +16,12 @@ public class PatrollingState : State
         if (bb.patrolPoints.Length == 0)
             return;
         
+        if (bb.isAlert)
+            bb.guardRenderer.material.color = Color.yellow;
+        else
+            bb.guardRenderer.material.color = Color.gray;
+        
+        
         float speed = bb.isAlert ? bb.alertPatrolSpeed : bb.patrolSpeed;
         bb.agent.speed = speed;
         
