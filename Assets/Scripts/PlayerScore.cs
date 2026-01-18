@@ -22,7 +22,7 @@ public class PlayerScore : MonoBehaviour
 
     private void Start()
     {
-        IncreaseScore();
+        scoreText.text = "Score: " + currentScore;
     }
 
     public void IncreaseScore()

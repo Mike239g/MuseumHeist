@@ -13,7 +13,6 @@ public class PlayerCollision : MonoBehaviour
         else if (other.gameObject.CompareTag("Token"))
         {
             PlayerScore.instance.IncreaseScore();
-            Debug.Log("AAA");
             Destroy(other.gameObject);
         }
     }
