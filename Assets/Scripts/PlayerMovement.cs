@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Originalmente usé una cinemachine freelook camera
-    // Por lo que el movimiento de la cámara ya está hecho ahí
     public float playerSpeed;
     public Transform camera;
     
@@ -23,12 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         InputHandle();
+        MovePlayer();
         
     }
 
     private void FixedUpdate()
     {
-        MovePlayer();
     }
 
     public void InputHandle()
